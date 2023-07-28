@@ -3,21 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <script src="./scripts/index.js"></script>
     <title>Emprendar</title>
   </head>
 
   <body>
     <header>
-      <nav>
-        <section>
-          <button>
-            <img src="./img/icons/menu-deep.svg" alt="logo menu" />
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <button id="open-menu-button">
+            <img
+              class="navbar__open-menu"
+              src="./img/icons/menu-deep.svg"
+              alt="open menu"
+            />
           </button>
-          <img class="logo" src="./img/icons/logo.svg" alt="logo emprendar" />
-        </section>
+          <img
+            class="navbar__logo--image"
+            src="./img/icons/logo.svg"
+            alt="Logo emprendar"
+          />
+        </div>
 
-        <ul>
+        <ul class="navbar__social-media">
           <li>
             <a target="_blank" href=""
               ><img src="./img/icons/brand-instagram.svg" alt="logo instagram"
@@ -42,59 +57,68 @@
       </nav>
     </header>
 
-    <section class="menu">
-      <section class="close">
-        <button>
-          <img class="close-logo" src="./img/icons/x.svg" alt="logo menu" />
+    <div
+      id="backdrop-filter"
+      class="backdrop-filter backdrop-filter--closed full-height"
+    ></div>
+
+    <section
+      class="sidebar-menu sidebar-menu--closed full-height"
+      id="sidebar-menu"
+    >
+      <article class="sidebar-menu__content" id="close-menu-button">
+        <button class="close-icon-button">
+          <img src="./img/icons/x.svg" alt="close icon" />
         </button>
-      
-      </section>
 
-      <section>
-         <img class="logo" src="./img/icons/logo.svg" alt="logo emprendar" />
-      </section>
-     
+        <img
+          class="navbar__logo--image"
+          src="./img/icons/logo.svg"
+          alt="Logo emprendar"
+        />
 
-      <section>
-        <ul class="seccion">
-            <li><a href="#academy">Startup Academy</a></li>
+        <div class="sidebar-menu__content__sections">
+          <ul>
+            <li><a href="#academy" class="active">Startup Academy</a></li>
             <li><a href="#podcast">Podcasts</a></li>
             <li><a href="#sturtups">Startups</a></li>
             <li><a href="#contact">Contacto</a></li>
           </ul>
-      </section>
+        </div>
+      </article>
 
-      <section>
-        <ul class="social">
-            <li>
-              <a target="_blank" href=""
-                ><img src="./img/icons/brand-instagram.svg" alt="logo instagram"
-              /></a>
-            </li>
-            <li>
-              <a target="_blank" href=""
-                ><img src="./img/icons/brand-linkedin.svg" alt="logo linkedin"
-              /></a>
-            </li>
-            <li>
-              <a target="_blank" href=""
-                ><img src="./img/icons/brand-spotify.svg" alt="logo spotify"
-              /></a>
-            </li>
-            <li>
-              <a target="_blank" href=""
-                ><img src="./img/icons/brand-youtube.svg" alt="logo youtube"
-              /></a>
-            </li>
-          </ul>
-      </section>
+      <article class="sidebar-menu__content__social-media">
+        <ul>
+          <li>
+            <a target="_blank" href=""
+              ><img src="./img/icons/brand-instagram.svg" alt="logo instagram"
+            /></a>
+          </li>
+          <li>
+            <a target="_blank" href=""
+              ><img src="./img/icons/brand-linkedin.svg" alt="logo linkedin"
+            /></a>
+          </li>
+          <li>
+            <a target="_blank" href=""
+              ><img src="./img/icons/brand-spotify.svg" alt="logo spotify"
+            /></a>
+          </li>
+          <li>
+            <a target="_blank" href=""
+              ><img src="./img/icons/brand-youtube.svg" alt="logo youtube"
+            /></a>
+          </li>
+        </ul>
+      </article>
     </section>
-    <main>
-      <div id="home"></div>
-      <div id="academy"></div>
-      <div id="podcast"></div>
-      <div id="sturtups"></div>
-      <div id="contact"></div>
+
+    <main class="main-sections">
+      <div class="section" id="home"></div>
+      <div class="section" id="academy"></div>
+      <div class="section" id="podcast"></div>
+      <div class="section" id="sturtups"></div>
+      <div class="section" id="contact"></div>
     </main>
   </body>
 </html>
