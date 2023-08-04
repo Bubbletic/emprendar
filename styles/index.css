@@ -19,6 +19,8 @@
 :root {
   --primary-brand: #fff32a;
   --black: #101010;
+  --grey: #ebebec;
+  --grey-secondary: #231f20;
   --white: #ffffff;
 
   --bg-section-gray: #ebebec;
@@ -36,7 +38,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 button {
@@ -138,7 +140,7 @@ li {
 }
 
 .backdrop-filter--closed {
-  animation: backdropFade 0.8s ease-out;
+  animation: backdropFade 00.8s ease-out;
   z-index: -10;
 }
 
@@ -217,25 +219,166 @@ li {
 .main-sections .section {
   scroll-snap-align: start;
 }
-
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
 #home {
-  background-color: tomato;
+  background-image: url("../img/fondos/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
-
+.home-content_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 178px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.home-content_text_title{
+  color: white;
+}
+.home-content_img{
+  width: 40px;
+  height: 20px;
+  margin-bottom: 24px;
+}
 #academy {
-  background-color: lightblue;
+  background-color: var(--grey);
+}
+.academy-content_text {
+  width: 502px;
+  height: 432px;
+  color: var(--grey-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
+.academy-content_text div h1 {
+  color: var(--black);
+}
+.academy-content_card {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  gap: 24px;
+}
+.academy-content_card_left {
+  width: 202px;
+  height: 304px;
+  background-image: url("../img/fondos/Rectangle1.png");
+  border-radius: 24px;
+}
+.academy-content_card_center {
+  width: 302px;
+  height: 454px;
+  background-image: url("../img/fondos/Rectangle3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 24px;
+}
+.academy-content_card_right {
+  width: 202px;
+  height: 304px;
+  background-image: url("../img/fondos/Rectangle2.png");
+  border-radius: 24px;
+}
 #podcast {
-  background-color: pink;
+  background-image: url("../img/fondos/podcast.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
+.podcast-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+  gap: 24px;
+}
+.podcast-content_text {
+  width: 502px;
+  height: 432px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.podcast-content_text div h1 {
+  color: var(--primary-brand);
+}
+.podcast-img_arrowLeft {
+  transform: rotate(180deg);
+}
+.podcast-content_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../img/fondos/card.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  width: 280px;
+  height: 160px;
+  border-radius: 24px;
+}
+.podcast-content_number{
+  margin-left: 12px;
+  margin-top: 8px;
+}
+.podcast-content_card_footer {
+  background-color: var(--primary-brand);
+  border-radius: 0 0 24px 24px;
+  width: 100%;
+  text-align: center;
+  color: var(--black);
+}
 #startups {
-  background-color: aquamarine;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.startups-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.startups-content_arrowLeft {
+  transform: rotate(180deg);
+}
+.startups-content_text {
+  align-items: flex-start;
+  width: 502px;
+}
 /* SECCION FORMULARIO DE CONTACTO */
 
+.startups-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.startups-content_arrowLeft {
+  transform: rotate(180deg);
+}
+.startups-content_text {
+  align-items: flex-start;
+  width: 502px;
+}
 #contact {
   background-color: var(--bg-section-gray);
   padding: 12rem 14rem 0 14rem;
