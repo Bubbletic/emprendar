@@ -89,6 +89,10 @@ li {
   font-weight: 300;
 }
 
+.left-arrow {
+  transform: rotate(180deg);
+}
+
 /* Navbar */
 
 .navbar {
@@ -113,7 +117,11 @@ li {
 }
 
 .navbar__logo--image {
-  width: 170px;
+  width: 190px;
+}
+
+.navbar__logo--image.black {
+  filter: invert(100%);
 }
 
 .navbar__social-media {
@@ -226,7 +234,7 @@ li {
   justify-content: space-around;
 }
 #home {
-  background-image: url("../img/fondos/home.png");
+  background-image: url("../assets/images/backgrounds/section-home.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -241,10 +249,15 @@ li {
   margin-top: auto;
   margin-bottom: auto;
 }
-.home-content_text_title{
+
+.home-content_text img {
+  max-width: 350px;
+}
+
+.home-content_text_title {
   color: white;
 }
-.home-content_img{
+.home-content_img {
   width: 40px;
   height: 20px;
   margin-bottom: 24px;
@@ -274,13 +287,13 @@ li {
 .academy-content_card_left {
   width: 202px;
   height: 304px;
-  background-image: url("../img/fondos/Rectangle1.png");
+  background-image: url("../assets/dummy/dummy-accademy-1.png");
   border-radius: 24px;
 }
 .academy-content_card_center {
   width: 302px;
   height: 454px;
-  background-image: url("../img/fondos/Rectangle3.png");
+  background-image: url("../assets/dummy/dummy-accademy-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -289,11 +302,11 @@ li {
 .academy-content_card_right {
   width: 202px;
   height: 304px;
-  background-image: url("../img/fondos/Rectangle2.png");
+  background-image: url("../assets/dummy/dummy-accademy-3.png");
   border-radius: 24px;
 }
 #podcast {
-  background-image: url("../img/fondos/podcast.png");
+  background-image: url("../assets/images/backgrounds/section-podcast.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -316,14 +329,12 @@ li {
 .podcast-content_text div h1 {
   color: var(--primary-brand);
 }
-.podcast-img_arrowLeft {
-  transform: rotate(180deg);
-}
+
 .podcast-content_card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("../img/fondos/card.png");
+  background-image: url("../assets/dummy/podcast-preview-card.png");
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -331,7 +342,7 @@ li {
   height: 160px;
   border-radius: 24px;
 }
-.podcast-content_number{
+.podcast-content_number {
   margin-left: 12px;
   margin-top: 8px;
 }
@@ -356,29 +367,16 @@ li {
   justify-content: space-around;
   width: 100%;
 }
-.startups-content_arrowLeft {
+.startups-content__arrow-left {
   transform: rotate(180deg);
 }
 .startups-content_text {
   align-items: flex-start;
   width: 502px;
 }
+
 /* SECCION FORMULARIO DE CONTACTO */
 
-.startups-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-}
-.startups-content_arrowLeft {
-  transform: rotate(180deg);
-}
-.startups-content_text {
-  align-items: flex-start;
-  width: 502px;
-}
 #contact {
   background-color: var(--bg-section-gray);
   padding: 12rem 14rem 0 14rem;
