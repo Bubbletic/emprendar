@@ -17,9 +17,9 @@
 
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar navbar-hide" id="navbar">
         <div class="navbar__logo">
-          <button id="open-menu-button">
+          <button class="navbar__logo--open-button" id="open-menu-button">
             <img
               class="navbar__open-menu"
               src="./assets/icons/menu-deep.svg"
@@ -80,10 +80,10 @@
 
         <div class="sidebar-menu__content__sections">
           <ul>
-            <li><a href="#academy" class="active">Startup Academy</a></li>
-            <li><a href="#podcast">Podcasts</a></li>
-            <li><a href="#sturtups">Startups</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li class="sidebar-link"><a href="#academy">Startup Academy</a></li>
+            <li class="sidebar-link"><a href="#podcast">Podcasts</a></li>
+            <li class="sidebar-link"><a href="#startups">Startups</a></li>
+            <li class="sidebar-link"><a href="#contact">Contacto</a></li>
           </ul>
         </div>
       </article>
@@ -124,11 +124,13 @@
           />
           <h1 class="home-content__text">LOREM IPSUM DOLOR SIT AMET</h1>
         </div>
-        <img
-          class="home-arrow"
-          src="./assets/icons/arrow-bottom.svg"
-          alt="arrow"
-        />
+        <button id="goToFirstSection">
+          <img
+            class="home-arrow"
+            src="./assets/icons/arrow-bottom.svg"
+            alt="arrow"
+          />
+        </button>
       </section>
 
       <section class="section-wrapper" id="academy">
