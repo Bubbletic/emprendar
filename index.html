@@ -14,20 +14,20 @@
     <script src="./scripts/index.js"></script>
     <title>Emprendar</title>
   </head>
-
   <body>
+    <!-- Header/Navbar START -->
     <header>
       <nav class="navbar navbar-hide" id="navbar">
         <div class="navbar__logo">
-          <button class="navbar__logo--open-button" id="open-menu-button">
+          <button class="navbar__logo--open-button" id="openMenuButton">
             <img
-              class="navbar__open-menu"
+              class="navbar__open-menu-button"
               src="./assets/icons/menu-deep.svg"
               alt="open menu"
             />
           </button>
           <img
-            class="navbar__logo--image"
+            class="logo-image navbar-logo"
             src="./assets/brand/logo.png"
             alt="Logo emprendar"
           />
@@ -35,45 +35,55 @@
 
         <ul class="navbar__social-media">
           <li>
-            <a target="_blank" href=""
+            <a target="_blank" href="https://www.instagram.com/emprendar.ar/"
               ><img src="./assets/icons/instagram.svg" alt="logo instagram"
             /></a>
           </li>
           <li>
-            <a target="_blank" href=""
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/emprendar/posts/?feedView=all"
               ><img src="./assets/icons/linkedin.svg" alt="logo linkedin"
             /></a>
           </li>
           <li>
-            <a target="_blank" href=""
+            <a
+              target="_blank"
+              href="https://open.spotify.com/show/3XP1d2gLWcXlpWnjI9ilLn"
               ><img src="./assets/icons/spotify.svg" alt="logo spotify"
             /></a>
           </li>
           <li>
-            <a target="_blank" href=""
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCfMHFLNwDgFgfz0qMXNSS1g"
               ><img src="./assets/icons/youtube.svg" alt="logo youtube"
             /></a>
           </li>
         </ul>
       </nav>
     </header>
+    <!-- Header/Navbar END -->
 
+    <!-- Backdrop filter START -->
     <div
-      id="backdrop-filter"
+      id="backdropFilter"
       class="backdrop-filter backdrop-filter--closed full-height"
     ></div>
+    <!-- Backdrop filter END -->
 
+    <!-- Sidebar Menu START -->
     <section
       class="sidebar-menu sidebar-menu--closed full-height"
-      id="sidebar-menu"
+      id="sidebarMenu"
     >
-      <article class="sidebar-menu__content" id="close-menu-button">
+      <article class="sidebar-menu__content" id="closeMenuButton">
         <button class="close-icon-button">
           <img src="./assets/icons/close.svg" alt="close icon" />
         </button>
 
         <img
-          class="navbar__logo--image black"
+          class="logo-image black"
           src="./assets/brand/logo.png"
           alt="Logo emprendar"
         />
@@ -91,261 +101,330 @@
       <article class="sidebar-menu__content__social-media">
         <ul>
           <li>
-            <a target="_blank" href=""
+            <a target="_blank" href="https://www.instagram.com/emprendar.ar/"
               ><img src="./assets/icons/instagram.svg" alt="logo instagram"
             /></a>
           </li>
           <li>
-            <a target="_blank" href=""
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/emprendar/posts/?feedView=all"
               ><img src="./assets/icons/linkedin.svg" alt="logo linkedin"
             /></a>
           </li>
           <li>
-            <a target="_blank" href=""
+            <a
+              target="_blank"
+              href="https://open.spotify.com/show/3XP1d2gLWcXlpWnjI9ilLn"
               ><img src="./assets/icons/spotify.svg" alt="logo spotify"
             /></a>
           </li>
           <li>
-            <a target="_blank" href=""
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCfMHFLNwDgFgfz0qMXNSS1g"
               ><img src="./assets/icons/youtube.svg" alt="logo youtube"
             /></a>
           </li>
         </ul>
       </article>
     </section>
+    <!-- Sidebar Menu END -->
 
+    <!-- Sections START -->
     <main class="snap-sections">
+      <!-- Section HOME START -->
       <section class="section-wrapper" id="home">
-        <div class="home-content">
+        <div class="container section-home-container">
           <img
             class="home-content__logo"
             src="./assets/brand/logo.png"
             alt="Logo emprendar"
           />
           <h1 class="home-content__text">LOREM IPSUM DOLOR SIT AMET</h1>
-        </div>
-        <button id="goToFirstSection">
-          <img
-            class="home-arrow"
-            src="./assets/icons/arrow-bottom.svg"
-            alt="arrow"
-          />
-        </button>
-      </section>
-
-      <section class="section-wrapper" id="academy">
-        <div class="section-info-wrapper">
-          <h3 class="section-title">
-            HEADING TITLE <span class="outline">ACADEMY SECTION</span>
-          </h3>
-          <p class="section-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
-            vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
-            eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
-          </p>
-          <p class="section-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
-            vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
-            eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
-          </p>
-        </div>
-        <div class="academy__videos">
-          <button>
+          <button id="goToFirstSection" class="home-arrow">
             <img
-              class="startups-content__arrow-left"
-              src="./assets/icons/arrow-right.svg"
+              class="home-arrow__img"
+              src="./assets/icons/arrow-bottom.svg"
+              alt="arrow"
             />
           </button>
-          <iframe
-            class="startup-academy__video startup-academy__video--blur"
-            width="170"
-            height="300"
-            src="https://www.youtube.com/embed/ESCacibaI48"
-            title="INSTAGRAM: la VIDRIERA de las MARCAS"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            class="startup-academy__video"
-            width="220"
-            height="400"
-            src="https://www.youtube.com/embed/z6gI9O__oqo"
-            title="PROBÁ tu WEB como un MVP"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            class="startup-academy__video startup-academy__video--blur"
-            width="170"
-            height="300"
-            src="https://www.youtube.com/embed/Tceonsfq9iY"
-            title="¿Qué es el COLD CALLING?"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <button>
+        </div>
+      </section>
+      <!-- Section HOME END -->
+
+      <!-- Section ACADEMY START -->
+      <section class="section-wrapper" id="academy">
+        <div class="section-content container">
+          <div class="section-content__info">
+            <h3 class="section-content__info--title">
+              HEADING TITLE <span class="outline-black">SERCIVES SECTION</span>
+            </h3>
+            <p class="section-content__info--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
+              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
+              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+            </p>
+            <p class="section-content__info--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
+              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
+              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+            </p>
+          </div>
+          <div class="another-content">
+            <div class="academy-partners-wrapper">
+              <button>
+                <img class="arrow-left" src="./assets/icons/arrow-right.svg" />
+              </button>
+
+              <div class="academy-partners">
+                <!-- Partner left -->
+                <div class="academy-partners__card card-side-left">
+                  <img src="./assets/dummy/academy-partner-a.png" />
+                  <div class="academy-partners__card--info">
+                    <p class="academy-partners__card--info-description">
+                      JC Marketing
+                    </p>
+                    <p
+                      class="academy-partners__card--info-title outline-yellow"
+                    >
+                      MARKETING
+                    </p>
+                    <button>¡Me interesa!</button>
+                  </div>
+                </div>
+
+                <!-- Partner center -->
+                <div class="academy-partners__card card-center">
+                  <img src="./assets/dummy/academy-bubbletic.png" />
+                  <div class="academy-partners__card--info">
+                    <p class="academy-partners__card--info-description">
+                      Bubbletic
+                    </p>
+                    <p
+                      class="academy-partners__card--info-title outline-yellow"
+                    >
+                      DESARROLLO WEB
+                    </p>
+                    <button>¡Me interesa!</button>
+                  </div>
+                </div>
+
+                <!-- Partner right -->
+                <div class="academy-partners__card card-side-right">
+                  <img src="./assets/dummy/academy-partner-b.png" />
+                  <div class="academy-partners__card--info">
+                    <p class="academy-partners__card--info-description">
+                      Xeibo
+                    </p>
+                    <p
+                      class="academy-partners__card--info-title outline-yellow"
+                    >
+                      FINANZAS
+                    </p>
+                    <button>¡Me interesa!</button>
+                  </div>
+                </div>
+              </div>
+              <button>
+                <img src="./assets/icons/arrow-right.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section ACADEMY END -->
+
+      <!-- Section PODCAST START -->
+      <section class="section-wrapper" id="podcast">
+        <div class="section-content container">
+          <div class="section-content__info">
+            <h3 class="section-content__info--title yellow-text">
+              HEADING TITLE <span class="outline-yellow">PODCAST SECTION</span>
+            </h3>
+            <p class="section-content__info--text white-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
+              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
+              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+            </p>
+            <p class="section-content__info--text white-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
+              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
+              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+            </p>
+          </div>
+          <div class="another-content">
+            <div class="podcasts-wrapper">
+              <button>
+                <img class="arrow-left" src="./assets/icons/arrow-right.svg" />
+              </button>
+
+              <!-- Podcast list -->
+              <div class="podcasts">
+                <div class="podcast-content">
+                  <h2 class="podcast-content__number">#1</h2>
+                  <div class="podcast-content__footer">
+                    <h3>Podcast Title 1</h3>
+                  </div>
+                </div>
+
+                <div class="podcast-content">
+                  <h2 class="podcast-content__number">#2</h2>
+                  <div class="podcast-content__footer">
+                    <h3>Podcast Title 2</h3>
+                  </div>
+                </div>
+
+                <div class="podcast-content">
+                  <h2 class="podcast-content__number">#3</h2>
+                  <div class="podcast-content__footer">
+                    <h3>Podcast Title 3</h3>
+                  </div>
+                </div>
+
+                <div class="podcast-content">
+                  <h2 class="podcast-content__number">#4</h2>
+                  <div class="podcast-content__footer">
+                    <h3>Podcast Title 4</h3>
+                  </div>
+                </div>
+
+                <div class="podcast-content">
+                  <h2 class="podcast-content__number">#5</h2>
+                  <div class="podcast-content__footer">
+                    <h3>Podcast Title 5</h3>
+                  </div>
+                </div>
+
+                <div class="podcast-content">
+                  <h2 class="podcast-content__number">#6</h2>
+                  <div class="podcast-content__footer">
+                    <h3>Podcast Title 6</h3>
+                  </div>
+                </div>
+              </div>
+
+              <button>
+                <img src="./assets/icons/arrow-right.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section PODCAST END -->
+
+      <!-- Section STARTUPS START -->
+      <section class="section-wrapper" id="startups">
+        <div class="section-content container section-startups">
+          <!-- Carrousel left arrow -->
+          <button class="section-startups__left-carrousel">
+            <img class="arrow-left" src="./assets/icons/arrow-right.svg" />
+          </button>
+
+          <!-- Startup logo -->
+          <div class="section-startups__img-brand">
+            <img src="./assets/dummy/dummy-logo.svg" alt="logo Startup" />
+          </div>
+
+          <!-- Startup info -->
+          <div class="section-content__info">
+            <h3 class="section-content__info--title">STARTUP NAME</h3>
+            <p class="section-content__info--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
+              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
+              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="section-content__info--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
+              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
+              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+            </p>
+          </div>
+
+          <!-- Carrousel right arrow -->
+          <button class="section-startups__right-carrousel">
             <img src="./assets/icons/arrow-right.svg" />
           </button>
         </div>
       </section>
+      <!-- Section STARTUPS START -->
 
-      <section class="section-wrapper" id="podcast">
-        <div class="flex-container">
-          <div class="section-info-wrapper">
-            <h3 class="section-title yellow-text">
-              HEADING TITLE PODCAST SECTION
-            </h3>
-            <p class="section-text white-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
-              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
-              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
-            </p>
-            <p class="section-text white-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
-              vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
-              eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
-            </p>
-          </div>
-
-          <button>
-            <img
-              class="podcast-img left-arrow"
-              src="./assets/icons/arrow-right-yellow.svg"
-              alt=""
-            />
-          </button>
-          <div class="podcast-content">
-            <div class="podcast-content_card">
-              <h2 class="podcast-content_number">#1</h2>
-              <div class="podcast-content_card_footer">
-                <h3>Podcast Title 1</h3>
-              </div>
-            </div>
-
-            <div class="podcast-content_card">
-              <h2 class="podcast-content_number">#2</h2>
-              <div class="podcast-content_card_footer">
-                <h3>Podcast Title 2</h3>
-              </div>
-            </div>
-
-            <div class="podcast-content_card">
-              <h2 class="podcast-content_number">#3</h2>
-              <div class="podcast-content_card_footer">
-                <h3>Podcast Title 3</h3>
-              </div>
-            </div>
-
-            <div class="podcast-content_card">
-              <h2 class="podcast-content_number">#4</h2>
-              <div class="podcast-content_card_footer">
-                <h3>Podcast Title 4</h3>
-              </div>
-            </div>
-
-            <div class="podcast-content_card">
-              <h2 class="podcast-content_number">#5</h2>
-              <div class="podcast-content_card_footer">
-                <h3>Podcast Title 5</h3>
-              </div>
-            </div>
-
-            <div class="podcast-content_card">
-              <h2 class="podcast-content_number">#6</h2>
-              <div class="podcast-content_card_footer">
-                <h3>Podcast Title 6</h3>
-              </div>
-            </div>
-          </div>
-          <button>
-            <img src="./assets/icons/arrow-right-yellow.svg" alt="" />
-          </button>
-        </div>
-      </section>
-
-      <section class="section-wrapper" id="startups">
-        <div class="startups-wrapper">
-          <h1 class="section-title">HEADING TITLE</h1>
-          <div class="startups-content">
-            <button>
-              <img
-                class="startups-content__arrow-left"
-                src="./assets/icons/arrow-right.svg"
-                alt=""
-              />
-            </button>
-
-            <div class="startups-content__img">
-              <img src="./assets/dummy/dummy-logo.svg" alt="logo Startup" />
-            </div>
-            <div class="startups-content__texts">
-              <p class="section-text">
-                Elementum integer enim neque volutpat ac. Lacus vestibulum sed
-                arcu non odio euismod lacinia at quis. Faucibus a pellentesque
-                sit amet porttitor eget dolor morbi. Lacus sed viverra tellus in
-                hac. Blandit cursus risus at ultrices mi tempus imperdiet nulla
-                malesuada.
-              </p>
-              <p class="section-text">
-                Pretium quam vulputate dignissim suspendisse in est ante in.
-                Ultrices in iaculis nunc sed augue. Nibh ipsum consequat nisl
-                vel pretium lectus quam id leo. A iaculis at erat pellentesque
-                adip scing commodo.
-              </p>
-            </div>
-            <button>
-              <img src="./assets/icons/arrow-right.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <!-- Section CONTACT START -->
       <section class="section-wrapper" id="contact">
-        <div class="flex-container">
-          <div class="section-info-wrapper">
-            <h3 class="section-title">HEADING TITLE CONTACT SECTION</h3>
-            <p class="section-text">
+        <div class="section-content container">
+          <div class="section-content__info">
+            <h3 class="section-content__info--title">CONTACT SECTION</h3>
+            <p class="section-content__info--text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
               vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
               eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
             </p>
           </div>
 
-          <form class="contact-form">
-            <div class="contact-form__input-wrapper">
-              <input class="input" type="text" required spellcheck="false" />
-              <label class="label">Nombre *</label>
-            </div>
-            <div class="contact-form__input-wrapper">
-              <input class="input" type="text" required spellcheck="false" />
-              <label class="label">Email *</label>
-            </div>
-            <div class="contact-form__input-wrapper">
-              <select class="input">
-                <!-- <option value="none" selected disabled hidden></option> -->
-                <option value="1">Podcast</option>
-                <option value="2">Startup Academy</option>
-                <option value="3">Audiovisual</option>
-                <option value="3" selected>Otro</option>
-              </select>
-              <label class="label">Servicio *</label>
-            </div>
-            <div class="contact-form__input-wrapper textarea">
-              <textarea
-                class="input textarea-input"
-                type="text"
-                required
-                spellcheck="false"
-              ></textarea>
-              <label class="label">Mensaje</label>
-            </div>
-            <button class="contact-form__button" ype="submit">Enviar</button>
-          </form>
+          <div class="another-content">
+            <form class="contact-form">
+              <!-- Input name -->
+              <div class="contact-form__input-wrapper">
+                <input
+                  name="contact-name"
+                  class="contact-form__input"
+                  type="text"
+                  spellcheck="false"
+                  autocomplete="off"
+                />
+                <label class="contact-form__label">Nombre *</label>
+              </div>
+
+              <!-- Input email -->
+              <div class="contact-form__input-wrapper">
+                <input
+                  name="contact-email"
+                  class="contact-form__input"
+                  type="text"
+                  spellcheck="false"
+                  autocomplete="off"
+                />
+                <label class="contact-form__label">Email *</label>
+              </div>
+
+              <!-- Input service -->
+              <div class="contact-form__input-wrapper">
+                <input
+                  id="dropdownInput"
+                  name="contact-service"
+                  type="text"
+                  readonly
+                  class="contact-form__input"
+                  autocomplete="off"
+                />
+                <label class="contact-form__label">Servicio *</label>
+                <ul class="dropdown-list">
+                  <li class="dropdown-item">Opción 1</li>
+                  <li class="dropdown-item">Opción 2</li>
+                  <li class="dropdown-item">Opción 3</li>
+                </ul>
+              </div>
+
+              <!-- Input message -->
+              <div class="contact-form__input-wrapper">
+                <textarea
+                  name="contact-message"
+                  class="contact-form__input contact-form__input--textarea"
+                  type="text"
+                  spellcheck="false"
+                ></textarea>
+                <label class="contact-form__label contact-form__label--textarea"
+                  >Mensaje</label
+                >
+              </div>
+              <button class="contact-form__button" ype="submit">Enviar</button>
+            </form>
+          </div>
         </div>
       </section>
+      <!-- Section STARTUPS END -->
     </main>
+    <!-- Sections END -->
   </body>
 </html>
