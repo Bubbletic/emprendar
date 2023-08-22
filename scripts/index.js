@@ -189,8 +189,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* Evento para ir a la primera sección */
   goToFirstSection.addEventListener('click', function () {
-    const academySection = document.getElementById('academy');
-    academySection.scrollIntoView({ behavior: 'smooth' });
+    const servicesSection = document.getElementById('services');
+    servicesSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   /* Actualizar la barra de navegación según la sección actual en dispositivos móviles */
