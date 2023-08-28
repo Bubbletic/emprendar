@@ -1,0 +1,51 @@
+version: '3'
+networks:
+  emprendar-net:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: emprendar-mysql
+    tty: true
+    ports:
+      - "5001:3306"
+    volumes:
+      - "./db/:/var/lib/mysql/"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: emprendar_db
+      MYSQL_USER: soporte
+      MYSQL_PASSWORD: 1234
+    networks:
+      - emprendar-net
+
+  server:
+    image: wordpress:latest
+    container_name: emprendar-server
+    ports:
+      - "5002:80"
+    volumes:
+      - "./server/:/var/www/html"
+    environment:
+      WORDPRESS_DB_USER: soporte
+      WORDPRESS_DB_PASSWORD: 1234
+      WORDPRESS_DB_NAME: emprendar_db
+      WORDPRESS_DB_HOST: emprendar-mysql
+    depends_on:
+      - mysql
+    networks:
+      - emprendar-net
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: emprendar-myadmin
+    ports:
+      - "5003:80"
+    environment:
+      PMA_HOST: emprendar-mysql
+      MYSQL_ROOT_PASSWORD: 1234
+    depends_on:
+      - mysql
+    networks:
+      - emprendar-net
