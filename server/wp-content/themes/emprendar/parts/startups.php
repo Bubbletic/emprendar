@@ -29,7 +29,8 @@
 
             <!-- Carrousel right arrow -->
             <button class="section-startups__right-carrousel">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/arrow-right.svg" />
+                <img src="<?php echo get_template_directory_uri();?>/assets/icons/arrow-right.svg"
+                alt="<?php echo get_the_title() ?>" />
             </button>
         <?php else : ?>
             <p>No se encontraron publicaciones.</p>

@@ -1,18 +1,19 @@
+<?php 
+    $posts = array_reverse(list_post_by_type('service'));
+    $post_selected = $posts[0];
+?>
+
 <section class="section-wrapper" id="services">
     <div class="section-content container">
         <div class="section-content__info">
             <h3 class="section-content__info--title">
-                HEADING TITLE <span class="outline-black">SERCIVES SECTION</span>
+                <?php echo get_the_title($post_selected->ID);?>
+                <span class="outline-black">
+                    <?php echo get_field('sub_titulo', $post_selected->ID);?>
+                </span>
             </h3>
             <p class="section-content__info--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
-                vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
-                eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
-            </p>
-            <p class="section-content__info--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam
-                vel commodi cupiditate. Omnis magnam quo a ut labore voluptatibus
-                eaque esse cum ad eveniet veritatis architecto dicta, atque odit.
+                <?php echo get_field('texto_del_servicio', $post_selected->ID);?>
             </p>
         </div>
         <div class="another-content">
@@ -36,19 +37,25 @@
                         </div>
                     </div>
 
-                    <!-- Partner center -->
-                    <div class="services-partners__card card-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/dummy/academy-bubbletic.png" />
-                        <div class="services-partners__card--info">
-                            <p class="services-partners__card--info-description">
-                                Bubbletic
-                            </p>
-                            <p class="services-partners__card--info-title outline-yellow">
-                                DESARROLLO WEB
-                            </p>
-                            <button>¡Me interesa!</button>
+                    <?php foreach ($posts as $key=>$post) : ?>
+                        <?php setup_postdata($post); ?>
+                        <!-- Partner center -->
+                        <div class="services-partners__card card-center">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/dummy/academy-bubbletic.png" />
+                            <div class="services-partners__card--info">
+                                <p class="services-partners__card--info-description">
+                                    <?php echo get_field('nombre_empresa', $post->ID);?>
+                                </p>
+                                <p class="services-partners__card--info-title outline-yellow">
+                                    <?php echo get_field('servicio_que_ofrece', $post->ID);?>
+                                </p>
+                                <a href="<?php echo get_field('link_video', $post->ID);?>" target="_blank">
+                                    <button>¡Me interesa!</button>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endforeach ?>
 
                     <!-- Partner right -->
                     <div class="services-partners__card card-side-right">
