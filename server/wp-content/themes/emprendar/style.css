@@ -317,7 +317,7 @@ Author URI: https://www.bubbletic.com
     -webkit-text-stroke: 1px var(--black);
   }
   
-  .outline-yellow {
+  .outline-yellow > a {
     display: block;
     color: transparent;
     -webkit-text-stroke: 1px rgb(var(--primary-brand));
@@ -447,13 +447,14 @@ Author URI: https://www.bubbletic.com
   }
   
   .services-partners__card {
-    height: 450px;
     overflow: hidden;
     border-radius: 22px;
-    position: relative;
-    -webkit-transition: all 0.8s ease-in;
-    -o-transition: all 0.8s ease-in;
-    transition: all 0.8s ease-in;
+    height: 300px;
+    width: 150px;
+  }
+  .services-partners__card img {
+    height: 100%;
+    object-fit: cover;
   }
   
   .card-side-left,
@@ -481,12 +482,6 @@ Author URI: https://www.bubbletic.com
     -webkit-transform: scale(0.8) translateX(calc(50% + 360px));
     -ms-transform: scale(0.8) translateX(calc(50% + 360px));
     transform: scale(0.8) translateX(calc(50% + 360px));
-  }
-  
-  .services-partners__card img {
-    height: 100%;
-    -webkit-filter: opacity(90%);
-    filter: opacity(90%);
   }
   
   .services-partners__card--info {
@@ -531,21 +526,21 @@ Author URI: https://www.bubbletic.com
     font-weight: 500;
   }
   
-  .services-partners__card--info button {
+  .btn-yellow {
     background-color: rgb(var(--primary-brand), 0.7);
     color: var(--black);
     font-size: 0.9em;
     font-weight: 600;
     padding: 1.5em 1.2em;
     border-radius: 6px;
-    width: 90%;
+    width: 20em;
     margin: 0 auto;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   
-  .services-partners__card:hover button {
+  .btn-yellow:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
@@ -623,6 +618,15 @@ Author URI: https://www.bubbletic.com
     text-align: center;
     color: var(--black);
   }
+
+  .podcast-content__footer > a, 
+  .podcast-content__footer > a:visited,
+  .podcast-content__footer > a:hover,
+  .podcast-content__footer > a:focus
+  {
+    font-size: .7em;
+    color: var(--black);
+  }
   
   /* ------------------------ */
   
@@ -639,6 +643,10 @@ Author URI: https://www.bubbletic.com
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+  }
+
+  .section-startups__img-brand > img {
+    width: 15em;
   }
   
   /* ------------------------ */
@@ -979,3 +987,43 @@ Author URI: https://www.bubbletic.com
     }
   }
   
+/* START Carousel startups */
+
+#startups .swiper {
+  width: 80%;
+}
+
+#startups .swiper-slide {
+  padding-bottom: 100px;
+}
+
+#startups .swiper-button-next,
+#startups .swiper-button-prev {
+  color: var(--input-label) !important;
+}
+
+@media (max-width: 1250px) {
+  #startups .swiper-slide {
+    padding-bottom: 0;
+  }
+}
+
+/* ENDS Crousel startups */
+
+/* ------- SWIPER CAROUSEL -------- */
+.swiper-pagination-bullet-active {
+  background-color: rgb(var(--primary-brand)) !important;
+}
+
+/* START Carousel Services */
+#services .swiper {
+  width: 300px;
+  height: 500px;
+}
+
+#services .swiper-button-next,
+#services .swiper-button-prev {
+  color: rgb(var(--primary-brand)) !important;
+}
+
+/* ENDS Carousel Services */
