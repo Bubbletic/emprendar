@@ -16,4 +16,5 @@ jobs:
       with:
         server: ftp.emprendar.com
         username: bubbletic@demo.emprendar.com
-        password: ${{ secrets.ftp_password }}
+        #password: ${{ secrets.ftp_password }}
+        password: bubble2023
